@@ -7,7 +7,7 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 @Component
-public class EmailListener {
+public class emailListener {
 
     @Autowired
     private EmailService emailService;
