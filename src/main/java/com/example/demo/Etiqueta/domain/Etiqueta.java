@@ -5,19 +5,15 @@ import lombok.Data;
 
 import java.io.Serializable;
 
-@Data
 @Entity
-@Table(name = "etiqueta")
-
-public class Etiqueta implements Serializable {
+@Data
+public class Etiqueta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private int idEtiqueta;
+    private Integer idEtiqueta;
 
-    @Column(nullable = false)
     private String nombre;
 }

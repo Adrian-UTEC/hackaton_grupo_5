@@ -1,4 +1,7 @@
 package com.example.demo.Etiqueta.infrastructure;
 
-public class EtiquetaRepostory {
+import com.example.demo.Etiqueta.domain.Etiqueta;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface EtiquetaRepostory extends JpaRepository<Etiqueta, Integer> {
 }

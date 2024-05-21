@@ -1,20 +1,22 @@
 package com.example.demo.SalonEtiqueta.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.example.demo.Etiqueta.domain.Etiqueta;
+import com.example.demo.Salon.domain.salon;
+import jakarta.persistence.*;
 
 public class SalonEtiqueta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
-    @Column(nullable = false)
-    private int idEtiqueta;
+    @ManyToOne
+    @JoinColumn(name = "idSalon")
+    private salon salon;
 
-    @Column(nullable = false)
-    private String nombre;
+    @ManyToOne
+    @JoinColumn(name = "idEtiqueta")
+    private Etiqueta etiqueta;
+
 
 }
